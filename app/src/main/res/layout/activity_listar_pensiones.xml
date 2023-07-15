@@ -25,6 +25,11 @@
             android:onClick="matriculas"
             android:layout_marginBottom="15dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="LISTA DE PENSIONES"></TextView>
 
         <!-- El ScrollView y TableLayout siguen aquí -->
         <ScrollView

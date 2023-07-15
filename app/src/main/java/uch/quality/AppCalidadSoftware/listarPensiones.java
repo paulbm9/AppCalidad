@@ -75,11 +75,12 @@ public class listarPensiones extends AppCompatActivity {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                        String postId = jsonObject.getString("postId");
-                        String id = jsonObject.getString("id");
-                        String name = jsonObject.getString("name"); // Corregir el nombre de la clave
-                        String email = jsonObject.getString("email"); // Corregir el nombre de la clave
-                        String body = jsonObject.getString("body"); // Corregir el nombre de la clave
+                        String postId = jsonObject.getString("id_pension");
+                        String id = jsonObject.getString("fecha_vencimiento");
+                        String name = jsonObject.getString("fecha_operacion"); // Corregir el nombre de la clave
+                        String email = jsonObject.getString("monto"); // Corregir el nombre de la clave
+                        String body = jsonObject.getString("estado");
+                        String body2 = jsonObject.getString("nombreEstudiante");// Corregir el nombre de la clave
 
                         // Crea una nueva fila de la tabla
                         TableRow tableRow = new TableRow(listarPensiones.this);
@@ -90,6 +91,7 @@ public class listarPensiones extends AppCompatActivity {
                         TextView nameTextView = createTextView(name);
                         TextView emailTextView = createTextView(email);
                         TextView bodyTextView = createTextView(body);
+                        TextView bodyTextView2 = createTextView(body2);
 
                         // Añade los text views a la fila
                         tableRow.addView(postIdTextView);
@@ -97,6 +99,7 @@ public class listarPensiones extends AppCompatActivity {
                         tableRow.addView(nameTextView);
                         tableRow.addView(emailTextView);
                         tableRow.addView(bodyTextView);
+                        tableRow.addView(bodyTextView2);
 
                         // Añade la fila a la tabla
                         tableLayout.addView(tableRow);

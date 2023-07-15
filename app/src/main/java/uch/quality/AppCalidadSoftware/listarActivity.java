@@ -80,11 +80,13 @@ public class listarActivity extends AppCompatActivity {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                        String postId = jsonObject.getString("postId");
-                        String id = jsonObject.getString("id");
-                        String monto = jsonObject.getString("name");
-                        String monto2 = jsonObject.getString("email");
-                        String monto3 = jsonObject.getString("body");
+                        String postId = jsonObject.getString("idmatricula");
+                        String id = jsonObject.getString("fechamatricula");
+                        String monto = jsonObject.getString("cronograma");
+                        String monto2 = jsonObject.getString("fechaPago");
+                        String monto3 = jsonObject.getString("nombreEstudiante");
+                        String monto4 = jsonObject.getString("nombreSecretaria");
+                        String monto5 = jsonObject.getString("nombreSalon");
 
 
                         // Crea una nueva fila de la tabla
@@ -96,6 +98,8 @@ public class listarActivity extends AppCompatActivity {
                         TextView monTextView = createTextView(monto);
                         TextView monTextView2 = createTextView(monto2);
                         TextView monTextView3 = createTextView(monto3);
+                        TextView monTextView4 = createTextView(monto4);
+                        TextView monTextView5 = createTextView(monto5);
 
 
 
@@ -105,6 +109,8 @@ public class listarActivity extends AppCompatActivity {
                         tableRow.addView(monTextView);
                         tableRow.addView(monTextView2);
                         tableRow.addView(monTextView3);
+                        tableRow.addView(monTextView4);
+                        tableRow.addView(monTextView5);
 
 
                         // Añade la fila a la tabla
